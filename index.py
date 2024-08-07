@@ -29,7 +29,7 @@ def get_chat_completion():
             }
         ],
         temperature=1,
-        max_tokens=5000,
+        max_tokens=1024,
         top_p=1,
         stream=True,
         stop=None,
@@ -46,7 +46,8 @@ def get_chat_completion():
     # Ajouter le lien Facebook à la fin de la réponse
     response += "\n\nSi vous êtes intéressé, voici le lien vers le profil Facebook du créateur de cette API de chat : https://www.facebook.com/bruno.rakotomalala.7549"
 
-    return response
+    # Renvoyer la réponse sous forme de JSON
+    return jsonify({"response": response})
 
 if __name__ == '__main__':
     # Démarrer l'application Flask sur 0.0.0.0
