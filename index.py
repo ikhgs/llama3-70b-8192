@@ -29,7 +29,7 @@ def get_chat_completion():
             }
         ],
         temperature=1,
-        max_tokens=1024,
+        max_tokens=5000,
         top_p=1,
         stream=True,
         stop=None,
